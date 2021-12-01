@@ -108,8 +108,8 @@ public static boolean betWin(int[][] arr){
         final int Empty = 0;
 
         //draw board
-        StdDraw.setPenColor(StdDraw.RED);
-        StdDraw.filledSquare(60,60,60);
+        StdDraw.setPenColor(StdDraw.WHITE);
+        StdDraw.filledSquare(60,60,90);
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.line(15, 0, 105, 0);
         StdDraw.line(15, 30, 105, 30);
