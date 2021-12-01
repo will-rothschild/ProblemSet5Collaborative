@@ -13,6 +13,7 @@ public class main {
 
 
         Balance userBal = new Balance(100);
+        RecordTracker userRecord = new RecordTracker();
         int[][] slotMachine = new int[3][3];
 
         Scanner scnr = new Scanner(System.in);
@@ -46,8 +47,10 @@ public class main {
 
             if(betWin(slotMachine) == true){
                 userBal.winBet();
+                userRecord.incWins();
             } else {
                 userBal.loseBet();
+                userRecord.incLosses();
             }
 
 
