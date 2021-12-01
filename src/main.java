@@ -11,7 +11,6 @@ public class main {
 
 
 
-
         Balance userBal = new Balance(100);
         RecordTracker userRecord = new RecordTracker();
         int[][] slotMachine = new int[3][3];
@@ -39,7 +38,7 @@ public class main {
 
                 for(int i = 0; i < 3; i++){
                     for(int j = 0; j < 3; j++){
-                        slotMachine[i][j] = randomNumBetween0And7();
+                        slotMachine[i][j] = randomNumBetween0And5();
                         System.out.print(slotMachine[i][j] + ", ");
                     }
                     System.out.println();
@@ -78,9 +77,9 @@ public class main {
 
 
 
-    public static int randomNumBetween0And7() {
+    public static int randomNumBetween0And5() {
         Random rand = new Random();
-        return rand.nextInt((7) + 1);
+        return rand.nextInt((5) + 1);
     }
 
 public static boolean betWin(int[][] arr){
