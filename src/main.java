@@ -1,5 +1,8 @@
+import javax.swing.*;
+import java.awt.*;
 import java.util.Scanner;
 import java.util.Random;
+
 
 public class main {
 
@@ -12,6 +15,8 @@ public class main {
         Scanner scnr = new Scanner(System.in);
         boolean check = true;
         int betAmount;
+
+
 
         while(check = true){
 
@@ -61,6 +66,7 @@ public class main {
     }
 
 
+
     public static int randomNumBetween0And7() {
         Random rand = new Random();
         return rand.nextInt((7) + 1);
@@ -86,9 +92,22 @@ public static boolean betWin(int[][] arr){
     }
     return false;
 }
+    public static void drawBoard(int[][] board) {
+        StdDraw.setPenColor(StdDraw.BLACK);
+        final int Empty = 0;
 
+        //draw board
 
-
+        StdDraw.line(15, 0, 105, 0);
+        StdDraw.line(15, 30, 105, 30);
+        StdDraw.line(15, 60, 105, 60);
+        StdDraw.line(15, 90, 105, 90);
+        StdDraw.line(15, 0, 15, 90);
+        StdDraw.line(45, 0, 45, 90);
+        StdDraw.line(75, 0, 75, 90);
+        StdDraw.line(105, 0, 105, 90);
+    }
+    }
 
 
 
