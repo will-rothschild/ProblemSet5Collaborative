@@ -35,8 +35,10 @@ public class main {
 
 
 
-            } else if(StdDraw.isKeyPressed(81)){
+            }
+            if(StdDraw.isKeyPressed(81)){
                 check = false;
+                break;
             }
 
 
@@ -46,7 +48,7 @@ public class main {
 
 
         }
-        System.out.println("Your final balance was " + userBal);
+        System.out.println("Your final balance was " + userBal.userBalToString());
 
 
 

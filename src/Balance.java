@@ -31,6 +31,11 @@ public class Balance {
         setBetAmount(0);
     }
 
+    public String userBalToString(){
+        String strBal = "" + balance;
+        return strBal;
+    }
+
 
 
 }
