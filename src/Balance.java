@@ -27,7 +27,12 @@ public class Balance {
     }
 
     public void winBet(){
-        setBalance(-2*betAmount);
+        setBalance(-1*betAmount);
+        setBetAmount(0);
+    }
+
+    public void loseBet(){
+        setBalance(betAmount);
         setBetAmount(0);
     }
 

@@ -8,7 +8,7 @@ public class main {
 
         Balance userBal = new Balance(100);
         int[][] slotMachine = new int[3][3];
-        //8 items
+
         Scanner scnr = new Scanner(System.in);
         boolean check = true;
         int betAmount;
@@ -17,7 +17,7 @@ public class main {
 
             System.out.println("Press P to Spin or Q to quit");
             //the on key press code here
-            StdDraw.pause(500);
+            StdDraw.pause(1000);
             if(StdDraw.isKeyPressed(80)){
                 System.out.print("Input bet amount: ");
                 betAmount = scnr.nextInt();
@@ -31,11 +31,16 @@ public class main {
                     System.out.println();
                 }
 
-
+            if(betWin(slotMachine) == true){
+                userBal.winBet();
+            } else {
+                userBal.loseBet();
+            }
 
 
 
             }
+            StdDraw.pause(1000);
             if(StdDraw.isKeyPressed(81)){
                 check = false;
                 break;
@@ -61,7 +66,26 @@ public class main {
         return rand.nextInt((7) + 1);
     }
 
+public static boolean betWin(int[][] arr){
 
+    for(int i = 0; i < 3; i++){
+        if(arr[i][0] == arr[i][1] && arr[i][0] == arr[i][2]){
+            return true;
+        }
+        }
+    for(int i = 0; i < 3; i++){
+        if(arr[0][i] == arr[1][i] && arr[0][i] == arr[2][i]){
+            return true;
+        }
+    }
+    if(arr[0][0]==arr[1][1] && arr[0][0] == arr[2][2]){
+        return true;
+    }
+    if(arr[0][2]==arr[1][1] && arr[0][2] == arr[2][0]){
+        return true;
+    }
+    return false;
+}
 
 
 
