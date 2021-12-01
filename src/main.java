@@ -9,6 +9,9 @@ public class main {
 
     public static void main(String[] args) {
 
+
+
+
         Balance userBal = new Balance(100);
         int[][] slotMachine = new int[3][3];
 
@@ -19,6 +22,11 @@ public class main {
 
 
         while(check = true){
+
+            StdDraw.setCanvasSize(500, 500);
+            StdDraw.setScale(-5, 125);
+            drawBoard(slotMachine);
+            StdDraw.picture(60, 106, "marioslot.png", 120,30);
 
             System.out.println("Press P to Spin or Q to quit");
             //the on key press code here
@@ -93,11 +101,13 @@ public static boolean betWin(int[][] arr){
     return false;
 }
     public static void drawBoard(int[][] board) {
-        StdDraw.setPenColor(StdDraw.BLACK);
+
         final int Empty = 0;
 
         //draw board
-
+        StdDraw.setPenColor(StdDraw.RED);
+        StdDraw.filledSquare(60,60,60);
+        StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.line(15, 0, 105, 0);
         StdDraw.line(15, 30, 105, 30);
         StdDraw.line(15, 60, 105, 60);
@@ -114,4 +124,4 @@ public static boolean betWin(int[][] arr){
 
 
 
-}
+
