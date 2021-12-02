@@ -31,6 +31,8 @@ public class main {
             StdDraw.picture(123, 30, "tube.png", 25,110);
             StdDraw.picture(60, -15, "grass.png", 170,15);
 
+            upperCard(userRecord.getWins(), userRecord.getLosses(), userBal.getBalance());
+            StdDraw.text(60, 110, "Hold P to Spin or Q to Quit");
 
             System.out.println("Press P to Spin or Q to quit");
             //the on key press code here
@@ -74,7 +76,7 @@ public class main {
             slot3C(slotMachine);
                 drawBoard(slotMachine);
 
-            StdDraw.pause(10000);
+            StdDraw.pause(5000);
 
 
 
@@ -152,6 +154,14 @@ public static boolean betWin(int[][] arr){
         StdDraw.line(75, 0, 75, 90);
         StdDraw.line(105, 0, 105, 90);
     }
+
+
+
+    public static void upperCard(int wins, int losses, int balance) {
+        StdDraw.text(60, 100, "Balance: " + balance + "   Wins: " + wins + "   Losses: " + losses);
+    }
+
+
 
     public static void slot1A(int[][]slotMachine) {
         switch (slotMachine[0][0]) {
