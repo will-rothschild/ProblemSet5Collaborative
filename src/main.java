@@ -19,17 +19,17 @@ public class main {
         boolean check = true;
         int betAmount;
 
-
+        StdDraw.setCanvasSize(500, 500);
+        StdDraw.setScale(-20, 140);
+        drawBoard(slotMachine);
+        StdDraw.picture(60, 126, "marioslot.png", 150,30);
+        StdDraw.picture(-4, 30, "tube.png", 25,110);
+        StdDraw.picture(123, 30, "tube.png", 25,110);
+        StdDraw.picture(60, -15, "grass.png", 170,15);
 
         while(check = true){
 
-            StdDraw.setCanvasSize(500, 500);
-            StdDraw.setScale(-20, 140);
-            drawBoard(slotMachine);
-            StdDraw.picture(60, 126, "marioslot.png", 150,30);
-            StdDraw.picture(-4, 30, "tube.png", 25,110);
-            StdDraw.picture(123, 30, "tube.png", 25,110);
-            StdDraw.picture(60, -15, "grass.png", 170,15);
+
 
 
             System.out.println("Press P to Spin or Q to quit");
@@ -47,6 +47,10 @@ public class main {
                     }
                     System.out.println();
                 }
+                StdDraw.setPenColor(Color.WHITE);
+                StdDraw.filledSquare(60,45,45);
+                drawBoard(slotMachine);
+                StdDraw.pause(600);
             slot1A(slotMachine);
                 drawBoard(slotMachine);
                 StdDraw.pause(800);
@@ -74,8 +78,6 @@ public class main {
             slot3C(slotMachine);
                 drawBoard(slotMachine);
 
-            StdDraw.pause(10000);
-
 
 
             if(betWin(slotMachine) == true){
@@ -87,7 +89,7 @@ public class main {
             }
 
 
-
+                StdDraw.pause(10000);
             }
             StdDraw.pause(1000);
             if(StdDraw.isKeyPressed(81)){
@@ -119,20 +121,61 @@ public class main {
 
 public static boolean betWin(int[][] arr){
 
+    StdDraw.setPenColor(Color.RED);
     for(int i = 0; i < 3; i++){
         if(arr[i][0] == arr[i][1] && arr[i][0] == arr[i][2]){
+            switch (i) {
+                case 1:
+                    StdDraw.square(60,15,15);
+                    StdDraw.square(60,45,15);
+                    StdDraw.square(60,75,15);
+                    break;
+                case 2:
+                    StdDraw.square(90,15,15);
+                    StdDraw.square(90,45,15);
+                    StdDraw.square(90,75,15);
+                    break;
+                default:
+                    StdDraw.square(30,15,15);
+                    StdDraw.square(30,45,15);
+                    StdDraw.square(30,75,15);
+                    break;
+            }
             return true;
         }
         }
     for(int i = 0; i < 3; i++){
         if(arr[0][i] == arr[1][i] && arr[0][i] == arr[2][i]){
+            switch (i) {
+                case 1:
+                    StdDraw.square(60,45,15);
+                    StdDraw.square(30,45,15);
+                    StdDraw.square(90,45,15);
+                    break;
+                case 2:
+                    StdDraw.square(60,75,15);
+                    StdDraw.square(30,75,15);
+                    StdDraw.square(90,75,15);
+                    break;
+                default:
+                    StdDraw.square(60,15,15);
+                    StdDraw.square(30,15,15);
+                    StdDraw.square(90,15,15);
+                    break;
+            }
             return true;
         }
     }
     if(arr[0][0]==arr[1][1] && arr[0][0] == arr[2][2]){
+        StdDraw.square(30,15,15);
+        StdDraw.square(60,45,15);
+        StdDraw.square(90,75,15);
         return true;
     }
     if(arr[0][2]==arr[1][1] && arr[0][2] == arr[2][0]){
+        StdDraw.square(90,15,15);
+        StdDraw.square(60,45,15);
+        StdDraw.square(30,75,15);
         return true;
     }
     return false;
