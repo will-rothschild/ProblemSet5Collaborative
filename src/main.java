@@ -21,7 +21,7 @@ public class main {
 
 
 
-        while(check = true){
+        while(check = true && userBal.getBalance() > 0){
 
             StdDraw.setCanvasSize(500, 500);
             StdDraw.setScale(-20, 140);
@@ -37,7 +37,7 @@ public class main {
             System.out.println("Press P to Spin or Q to quit");
             //the on key press code here
             StdDraw.pause(1000);
-            if(StdDraw.isKeyPressed(80) && userBal.getBalance() != 0){
+            if(StdDraw.isKeyPressed(80)){
                 System.out.print("Input bet amount: ");
                 betAmount = scnr.nextInt();
                 userBal.setBetAmount(betAmount);
@@ -104,7 +104,19 @@ public class main {
 
 
         }
-        if(userBal.getBalance()!= 0) {
+
+        StdDraw.setCanvasSize(500, 500);
+        StdDraw.setScale(-20, 140);
+        drawBoard(slotMachine);
+        StdDraw.picture(60, 126, "marioslot.png", 150,30);
+        StdDraw.picture(-4, 30, "tube.png", 25,110);
+        StdDraw.picture(123, 30, "tube.png", 25,110);
+        StdDraw.picture(60, -15, "grass.png", 170,15);
+
+        upperCard(userRecord.getWins(), userRecord.getLosses(), userBal.getBalance());
+
+
+        if(userBal.getBalance()> 0) {
             StdDraw.text(60, 75,"Your final balance was " + userBal.userBalToString());
         } else {
             StdDraw.text(60, 75, "Sorry, You're Out of Money");
