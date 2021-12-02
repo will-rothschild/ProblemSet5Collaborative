@@ -43,6 +43,19 @@ public class main {
                     }
                     System.out.println();
                 }
+            slot1A(slotMachine);
+            slot2A(slotMachine);
+            slot3A(slotMachine);
+            slot1B(slotMachine);
+            slot2B(slotMachine);
+            slot3B(slotMachine);
+            slot1C(slotMachine);
+            slot2C(slotMachine);
+            slot3C(slotMachine);
+            drawBoard(slotMachine);
+            StdDraw.pause(500);
+
+
 
             if(betWin(slotMachine) == true){
                 userBal.winBet();
@@ -72,7 +85,8 @@ public class main {
 
 
 
-
+        StdDraw.setPenColor(StdDraw.WHITE);
+        StdDraw.filledSquare(60,60,90);
     }
 
 
@@ -119,7 +133,182 @@ public static boolean betWin(int[][] arr){
         StdDraw.line(75, 0, 75, 90);
         StdDraw.line(105, 0, 105, 90);
     }
+
+    public static void slot1A(int[][]slotMachine) {
+        switch (slotMachine[0][0]) {
+            case 1:  StdDraw.picture(30, 15, "star.png", 30,30);
+                break;
+            case 2: StdDraw.picture(30, 15, "coin.png", 30,30);
+                break;
+            case 3:  StdDraw.picture(30, 15, "mushroom.png", 30,30);
+                break;
+            case 4:  StdDraw.picture(30, 15, "pow.png", 30,30);
+                break;
+            case 5:  StdDraw.picture(30, 15, "flag.png", 30,30);
+                break;
+            default: StdDraw.picture(30, 15, "flower.png", 30,30);
+                break;
+        }
+
     }
+    public static void slot2A(int[][]slotMachine) {
+        switch (slotMachine[1][0]) {
+            case 1:
+                StdDraw.picture(60, 15, "star.png", 30, 30);
+                break;
+            case 2:
+                StdDraw.picture(60, 15, "coin.png", 30, 30);
+                break;
+            case 3:
+                StdDraw.picture(60, 15, "mushroom.png", 30, 30);
+                break;
+            case 4:
+                StdDraw.picture(60, 15, "pow.png", 30, 30);
+                break;
+            case 5:
+                StdDraw.picture(60, 15, "flag.png", 30, 30);
+                break;
+            default:
+                StdDraw.picture(60, 15, "flower.png", 30, 30);
+                break;
+        }
+    }
+    public static void slot3A(int[][]slotMachine) {
+            switch (slotMachine[2][0]) {
+                case 1:  StdDraw.picture(90, 15, "star.png", 30,30);
+                    break;
+                case 2: StdDraw.picture(90, 15, "coin.png", 30,30);
+                    break;
+                case 3:  StdDraw.picture(90, 15, "mushroom.png", 30,30);
+                    break;
+                case 4:  StdDraw.picture(90, 15, "pow.png", 30,30);
+                    break;
+                case 5:  StdDraw.picture(90, 15, "flag.png", 30,30);
+                    break;
+                default: StdDraw.picture(90, 15, "flower.png", 30,30);
+                    break;
+            }
+        }
+    public static void slot1B(int[][]slotMachine) {
+                switch (slotMachine[0][1]) {
+                    case 1:  StdDraw.picture(30, 45, "star.png", 30,30);
+                        break;
+                    case 2: StdDraw.picture(30, 45, "coin.png", 30,30);
+                        break;
+                    case 3:  StdDraw.picture(30, 45, "mushroom.png", 30,30);
+                        break;
+                    case 4:  StdDraw.picture(30, 45, "pow.png", 30,30);
+                        break;
+                    case 5:  StdDraw.picture(30, 45, "flag.png", 30,30);
+                        break;
+                    default: StdDraw.picture(30, 45, "flower.png", 30,30);
+                        break;
+                }
+        }
+    public static void slot2B(int[][]slotMachine) {
+                    switch (slotMachine[1][1]) {
+                        case 1:  StdDraw.picture(60, 45, "star.png", 30,30);
+                            break;
+                        case 2: StdDraw.picture(60, 45, "coin.png", 30,30);
+                            break;
+                        case 3:  StdDraw.picture(60, 45, "mushroom.png", 30,30);
+                            break;
+                        case 4:  StdDraw.picture(60, 45, "pow.png", 30,30);
+                            break;
+                        case 5:  StdDraw.picture(60, 45, "flag.png", 30,30);
+                            break;
+                        default: StdDraw.picture(60, 45, "flower.png", 30,30);
+                            break;
+                    }
+        }
+    public static void slot3B(int[][]slotMachine) {
+             switch (slotMachine[2][1]) {
+                 case 1:  StdDraw.picture(90, 45, "star.png", 30,30);
+                                break;
+                 case 2: StdDraw.picture(90, 45, "coin.png", 30,30);
+                                break;
+                 case 3:  StdDraw.picture(90, 45, "mushroom.png", 30,30);
+                                break;
+                 case 4:  StdDraw.picture(90, 45, "pow.png", 30,30);
+                                break;
+                 case 5:  StdDraw.picture(90, 45, "flag.png", 30,30);
+                                break;
+                 default: StdDraw.picture(90, 45, "flower.png", 30,30);
+                                break;
+                        }
+        }
+    public static void slot1C(int[][]slotMachine) {
+        switch (slotMachine[0][2]) {
+            case 1:
+                StdDraw.picture(30, 75, "star.png", 30, 30);
+                break;
+            case 2:
+                StdDraw.picture(30, 75, "coin.png", 30, 30);
+                break;
+            case 3:
+                StdDraw.picture(30, 75, "mushroom.png", 30, 30);
+                break;
+            case 4:
+                StdDraw.picture(30, 75, "pow.png", 30, 30);
+                break;
+            case 5:
+                StdDraw.picture(30, 75, "flag.png", 30, 30);
+                break;
+            default:
+                StdDraw.picture(30, 75, "flower.png", 30, 30);
+                break;
+        }
+    }
+    public static void slot2C(int[][]slotMachine) {
+        switch (slotMachine[1][2]) {
+            case 1:
+                StdDraw.picture(60, 75, "star.png", 30, 30);
+                break;
+            case 2:
+                StdDraw.picture(60, 75, "coin.png", 30, 30);
+                break;
+            case 3:
+                StdDraw.picture(60, 75, "mushroom.png", 30, 30);
+                break;
+            case 4:
+                StdDraw.picture(60, 75, "pow.png", 30, 30);
+                break;
+            case 5:
+                StdDraw.picture(60, 75, "flag.png", 30, 30);
+                break;
+            default:
+                StdDraw.picture(60, 75, "flower.png", 30, 30);
+                break;
+        }
+    }
+    public static void slot3C(int[][]slotMachine) {
+        switch (slotMachine[2][2]) {
+            case 1:
+                StdDraw.picture(90, 75, "star.png", 30, 30);
+                break;
+            case 2:
+                StdDraw.picture(90, 75, "coin.png", 30, 30);
+                break;
+            case 3:
+                StdDraw.picture(90, 75, "mushroom.png", 30, 30);
+                break;
+            case 4:
+                StdDraw.picture(90, 75, "pow.png", 30, 30);
+                break;
+            case 5:
+                StdDraw.picture(90, 75, "flag.png", 30, 30);
+                break;
+            default:
+                StdDraw.picture(90, 75, "flower.png", 30, 30);
+                break;
+        }
+    }
+}
+
+
+
+
+
 
 
 
