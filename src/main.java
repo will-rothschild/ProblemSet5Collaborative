@@ -44,16 +44,33 @@ public class main {
                     System.out.println();
                 }
             slot1A(slotMachine);
+                drawBoard(slotMachine);
+                StdDraw.pause(800);
             slot2A(slotMachine);
+                drawBoard(slotMachine);
+                StdDraw.pause(800);
             slot3A(slotMachine);
+                drawBoard(slotMachine);
+                StdDraw.pause(800);
             slot1B(slotMachine);
+                drawBoard(slotMachine);
+                StdDraw.pause(800);
             slot2B(slotMachine);
+                drawBoard(slotMachine);
+                StdDraw.pause(800);
             slot3B(slotMachine);
+                drawBoard(slotMachine);
+                StdDraw.pause(800);
             slot1C(slotMachine);
+                drawBoard(slotMachine);
+                StdDraw.pause(800);
             slot2C(slotMachine);
+                drawBoard(slotMachine);
+                StdDraw.pause(800);
             slot3C(slotMachine);
-            drawBoard(slotMachine);
-            StdDraw.pause(500);
+                drawBoard(slotMachine);
+
+            StdDraw.pause(10000);
 
 
 
@@ -85,8 +102,8 @@ public class main {
 
 
 
-        StdDraw.setPenColor(StdDraw.WHITE);
-        StdDraw.filledSquare(60,60,90);
+//        StdDraw.setPenColor(StdDraw.WHITE);
+//        StdDraw.filledSquare(60,60,90);
     }
 
 
@@ -121,8 +138,6 @@ public static boolean betWin(int[][] arr){
         final int Empty = 0;
 
         //draw board
-        StdDraw.setPenColor(StdDraw.WHITE);
-        StdDraw.filledSquare(60,60,90);
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.line(15, 0, 105, 0);
         StdDraw.line(15, 30, 105, 30);
