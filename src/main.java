@@ -37,7 +37,7 @@ public class main {
             System.out.println("Press P to Spin or Q to quit");
             //the on key press code here
             StdDraw.pause(1000);
-            if(StdDraw.isKeyPressed(80)){
+            if(StdDraw.isKeyPressed(80) && userBal.getBalance() != 0){
                 System.out.print("Input bet amount: ");
                 betAmount = scnr.nextInt();
                 userBal.setBetAmount(betAmount);
@@ -104,8 +104,11 @@ public class main {
 
 
         }
-        System.out.println("Your final balance was " + userBal.userBalToString());
-
+        if(userBal.getBalance()!= 0) {
+            StdDraw.text(60, 75,"Your final balance was " + userBal.userBalToString());
+        } else {
+            StdDraw.text(60, 75, "Sorry, You're Out of Money");
+        }
 
 
 //        StdDraw.setPenColor(StdDraw.WHITE);
