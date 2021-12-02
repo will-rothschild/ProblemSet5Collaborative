@@ -24,9 +24,13 @@ public class main {
         while(check = true){
 
             StdDraw.setCanvasSize(500, 500);
-            StdDraw.setScale(-5, 125);
+            StdDraw.setScale(-20, 140);
             drawBoard(slotMachine);
-            StdDraw.picture(60, 106, "marioslot.png", 120,30);
+            StdDraw.picture(60, 126, "marioslot.png", 150,30);
+            StdDraw.picture(-4, 30, "tube.png", 25,110);
+            StdDraw.picture(123, 30, "tube.png", 25,110);
+            StdDraw.picture(60, -15, "grass.png", 170,15);
+
 
             System.out.println("Press P to Spin or Q to quit");
             //the on key press code here
